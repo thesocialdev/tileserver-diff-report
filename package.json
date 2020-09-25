@@ -1,0 +1,19 @@
+{
+  "name": "tileserver-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "domino": "^2.1.6",
+    "mkdirp": "^1.0.4",
+    "pixelmatch": "^5.2.1",
+    "pngjs": "^5.0.0",
+    "underscore": "^1.11.0"
+  }
+}
