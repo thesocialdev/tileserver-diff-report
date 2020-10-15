@@ -4,17 +4,17 @@ const TileSample = require('./lib/TileSample')
 
 const options = {
     sample: {
-        startZoom: 3, 
-        endZoom: 5, 
-        startX: 4, 
-        startY: 2,
-        maxSizePercentage: 0.01,
+        startZoom: 4,//9/305/208
+        endZoom: 14,
+        startX: 9,
+        startY: 6,
+        maxSizePercentage: 5,
         minSize: 150,  
     },
     benchmark: {
         servers: [
-            { host: 'https://maps.wikimedia.org', label: 'imposm3'},
-            { host: 'https://maps.wikimedia.org', label: 'osm2pgsql'},
+            { host: 'http://localhost:6533', label: 'imposm3'},
+            { host: 'http://localhost:6534', label: 'osm2pgsql'},
         ],
         threshold: 0.1,
     }
