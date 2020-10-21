@@ -4,17 +4,18 @@ const TileSample = require('./lib/TileSample')
 
 const options = {
     sample: {
-        startZoom: 4,//9/305/208
-        endZoom: 14,
-        startX: 9,
-        startY: 6,
+        startZoom: 3,//9/305/208
+        startX: 4,
+        startY: 4,
+        execFromZoom:12,
+        endZoom: 13,
         maxSizePercentage: 5,
         minSize: 150,  
     },
     benchmark: {
         servers: [
-            { host: 'http://localhost:6533', label: 'imposm3'},
-            { host: 'http://localhost:6534', label: 'osm2pgsql'},
+            { host: 'http://localhost:6533/osm-intl', label: 'imposm3'},
+            { host: 'http://localhost:6534/osm-intl', label: 'osm2pgsql'},
         ],
         threshold: 0.1,
     }
@@ -22,4 +23,22 @@ const options = {
 
 let sample = new TileSample(options.sample);
 let benchmark = new Benchmark(sample, options.benchmark);
-benchmark.exec();
+
+[ "en", "pt", "zh", "ru", "cr"].forEach(async (lang) => {
+    
+});
+
+console.log("Executing for language en");
+benchmark.exec("en").then(() => {
+    console.log("Executing for language pt");
+    benchmark.exec("pt").then(() => {
+        console.log("Executing for language zh");
+        benchmark.exec("zh").then(() => {
+            console.log("Executing for language ru");
+            benchmark.exec("ru").then(() => {
+                console.log("Executing for language cr");
+                benchmark.exec("cr");
+            });
+        });
+    });
+});
