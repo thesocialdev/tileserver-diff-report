@@ -9,12 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mapbox/mapbox-gl-native": "^5.0.2",
+    "@mapbox/sphericalmercator": "^1.1.0",
     "axios": "^0.20.0",
     "domino": "^2.1.6",
+    "global-mercator": "^3.1.0",
     "mkdirp": "^1.0.4",
     "pixelmatch": "^5.2.1",
     "pngjs": "^5.0.0",
     "request-rate-limiter": "^2.0.3",
+    "sharp": "^0.27.2",
     "throttled-request": "^0.1.1",
     "underscore": "^1.11.0"
   }
